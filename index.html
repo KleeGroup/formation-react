@@ -232,23 +232,6 @@ const Counter = React.createClass({
                         </ul>
                     </section>
                     <section>
-                        <h2>StateLess Component</h2>
-                        <p>Avec eux, il ne faut pas hésiter ! </p>
-                        <pre>
-                            <code class="javascript">
-  const Profile = ({image, bio}) => {
-    return (
-      &lt;div>
-          <img src={image} />
-          <div>{bio}</div>
-      &lt;/div>
-
-    )
-  };
-                            </code>
-                        </pre>
-                    </section>
-                    <section>
                         <h2>Petit récapitulatif</h2>
                         <ul>
                             <li>Avec des mixins, et un cycle de vie ==> React.CreateClass</li>
@@ -307,10 +290,10 @@ class TodoItem extends Component {
     this.setState({ editing: true });
   }
   render (){
-	const {editing} = this.state;
-	return (
-		&lt;div>Ouuuuuuuah un composant qui a un état : {editing}&lt;/div>
-	)
+    const {editing} = this.state;
+    return (
+	&lt;div>Ouuuuuuuah un composant qui a un état : {editing}&lt;/div>
+    )
   }
 }
                             </code>
@@ -324,21 +307,39 @@ class TodoItem extends Component {
 const Personne = () => {
     return (
       &lt;Profile nom={'Silvio'} bio={'BlaBlaBlaBlaBlaBlaBla'}/>
-
     )
   };					
 							
   const Profile = ({nom, bio}) => {
     return (
       &lt;div>
-          <span>nom</span>
+          <span>{nom}</span>
           <div>{bio}</div>
       &lt;/div>
 
     )
   };
+  
+  Profile.defaultProps= {
+    nom:'Amélie', 
+    bio: 'Focus'
+  }
+  
+ Profile.propTypes= {
+    nom: PropTypes.string, 
+    bio: PropTypes.string.isRequired
+  }
                             </code>
                         </pre>
+                    </section>
+		    <section>
+                        <h2>C'est le jour de Nöel !</h2>
+                        <p>Des liens utils</p>
+                        <ul>
+                            <li><a href='https://facebook.github.io/react/docs/reusable-components.html' target='blank' style="color: cyan">Les PropTypes</a></li>
+                            <li><a href='https://facebook.github.io/react/docs/tags-and-attributes.html' target='blank' style="color: cyan">Les attributs et Tags HTML</a></li>
+                         
+                        </ul>
                     </section>
                 </section>
                 <section data-background='wall3.jpg'>

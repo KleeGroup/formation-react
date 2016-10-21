@@ -282,7 +282,7 @@ const Hello = React.createClass({
     return (
       &lt;div>
         &lt;input value={hello} onChange={this.handleInputChange} />
-        &lt;div>hello {hello}</div>
+        &lt;div>hello {hello}&lt;/div>
       &lt;/div>
     );
   }
@@ -309,7 +309,7 @@ class TodoItem extends Component {
   render (){
 	const {editing} = this.state;
 	return (
-		&lt;div>Ouuuuuuuah un composant qui a un état : {editing}</div>
+		&lt;div>Ouuuuuuuah un composant qui a un état : {editing}&lt;/div>
 	)
   }
 }
